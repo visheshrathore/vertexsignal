@@ -1,0 +1,120 @@
+/* Reset default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Body styling */
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(to right, #f0f2f5, #d9e2ec);
+    color: #333;
+    padding-bottom: 100px; /* Space for fixed footer */
+  }
+  
+  /* Header styling */
+  .header {
+    text-align: center;
+    padding: 20px 0;
+    background-color: transparent;
+  }
+  
+  .logo {
+    max-width: 150px;
+    height: auto;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 10px;
+  }
+  
+  .logo:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px 5px rgba(0, 123, 255, 0.6);
+  }
+  
+  .site-title {
+    font-size: 2rem;
+    margin-top: 10px;
+    color: #2c3e50;
+  }
+  
+  /* Centered About Us heading */
+  .au {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 2rem;
+    color: #2c3e50;
+  }
+  
+  /* Main content styling */
+  .main-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 40px 20px;
+  }
+  
+  /* Card styling */
+  .card {
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 30px;
+    width: 300px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 15px 5px rgba(0, 123, 255, 0.3);
+  }
+  
+  .card h2 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    color: #2c3e50;
+  }
+  
+  .card p {
+    margin-bottom: 20px;
+    color: #555;
+  }
+  
+  /* Footer styling */
+  .footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    font-size: 0.9rem;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 1000;
+  }
+  
+  .footer a {
+    color: #4CAF50;
+    text-decoration: none;
+  }
+  
+  .footer a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Responsive design */
+  @media (max-width: 768px) {
+    .main-content {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .card {
+      width: 100%;
+      max-width: 400px;
+    }
+  }
+  

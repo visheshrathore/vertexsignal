@@ -1,0 +1,257 @@
+/* Reset default styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body styling */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(to right, #f0f2f5, #d9e2ec);
+  color: #333;
+  padding: 20px;
+}
+
+/* Header styling */
+.header {
+  text-align: center;
+  margin-bottom: 100px;
+  margin-top: 60px;
+  background-color: transparent;
+}
+
+.logo {
+  max-width: 150px;
+  height: auto;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-radius: 10px;
+}
+
+.logo:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px 5px rgba(0, 123, 255, 0.6);
+}
+
+/* General logo styling */
+.logo2 {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  object-fit: contain;
+  
+}
+
+/* Specific logo sizes */
+.binance-logo {
+  
+  width: 120px;
+  
+}
+
+.angelone-logo {
+  width: 120px;
+}
+
+.telegram-logo {
+  width: 120px;
+}
+
+
+.site-title {
+  font-size: 2rem;
+  margin-top: 10px;
+  color: #2c3e50;
+}
+
+/* Main content styling */
+.main-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+/* Card styling */
+.card {
+  background-color: #ffffff;
+  border-radius: 10px;
+  padding: 30px;
+  width: 300px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 15px 5px rgba(0, 123, 255, 0.3);
+}
+
+.card h2 {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  color: #e5e8eb;
+}
+
+.card p {
+  margin-bottom: 20px;
+  color: #555;
+}
+
+/* Button styling */
+.btn {
+  display: inline-block;
+  background: linear-gradient(45deg, #2980b9, #3498db);
+  color: #fff;
+  text-decoration: none;
+  padding: 12px 25px;
+  font-size: 1rem;
+  border-radius: 5px;
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btn:hover {
+  background: linear-gradient(45deg, #2980b9, #3498db);
+  box-shadow: 0 0 10px rgba(41, 128, 185, 0.7);
+  
+}
+
+
+/* Instagram Buttons Section */
+.instagram-buttons-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+.dialog-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+  width: 600px;
+}
+
+.instagram-btn-container {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.instagram-btn {
+  display: inline-block;
+  background: linear-gradient(135deg, #833ab4, #fd1d1d, #fcb045);
+  border-radius: 50%;
+  padding: 4px;
+  width: 80px;
+  height: 80px;
+  transition: transform 0.3s ease;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.instagram-btn:hover {
+  transform: scale(1.1);
+}
+
+.instagram-img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.instagram-handle {
+  font-size: 0.9rem;
+  color: #2c2c2c;
+  margin-top: 8px;
+  font-weight: 500;
+  transition: font-weight 0.2s ease, transform 0.2s ease;
+  cursor: pointer;
+}
+
+.instagram-handle:hover {
+  font-weight: 500;
+  transform: scale(1.05);
+  color: #e1306c;
+}
+
+.instagram-btn-container:not(:last-child) {
+  margin-right: 20px;
+}
+
+
+@media (max-width: 768px) {
+  .instagram-handle {
+    opacity: 0;
+    transform: translateY(10px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+  }
+
+  .instagram-btn-container.visible .instagram-handle {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 768px) {
+  .instagram-handle {
+    opacity: 0;
+    transform: translateY(10px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+  }
+
+  .instagram-btn-container.visible .instagram-handle {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+#ih{
+  align-items: center;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  text-align: center;
+  color: black;
+}
+
+/* Footer styling */
+.footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  font-size: 0.9rem;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 1000;
+}
+
+.footer a {
+  color: #4CAF50;
+  text-decoration: none;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .main-content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card {
+    width: 100%;
+    max-width: 400px;
+  }
+}
