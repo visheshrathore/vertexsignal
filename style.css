@@ -10,7 +10,7 @@ body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   background: linear-gradient(to right, #f0f2f5, #d9e2ec);
   color: #333;
-  padding: 20px;
+  padding-bottom: 100px; /* Space for fixed footer */
 }
 
 /* Header styling */
@@ -33,6 +33,52 @@ body {
   box-shadow: 0 0 20px 5px rgba(0, 123, 255, 0.6);
 }
 
+.site-title {
+  font-size: 2rem;
+  margin-top: 10px;
+  color: #2c3e50;
+}
+
+/* Tagline styling */
+.tagline {
+  font-size: 1rem;
+  color: #444;
+  margin-top: 10px;
+  line-height: 1.5;
+}
+
+.tagline small {
+  font-size: 0.8rem;
+  color: #777;
+}
+
+/* YouTube Button */
+.youtube-button {
+  margin-top: 10px;
+  display: inline-block;
+  margin-left: 10px;
+  vertical-align: middle;
+}
+
+.youtube-button a {
+  background-color: #FF0000;
+  color: white;
+  padding: 8px 15px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.youtube-button a:hover {
+  background-color: #cc0000;
+  transform: scale(1.08);
+  box-shadow: 0 0 20px 5px  rgba(0, 247, 255, 0.803), 0 8px 16px  #cc0000(255, 0, 0, 0.4);
+}
+
+
 /* General logo styling */
 .logo2 {
   max-width: 100%;
@@ -40,29 +86,12 @@ body {
   display: block;
   margin: 0 auto;
   object-fit: contain;
-  
 }
 
-/* Specific logo sizes */
-.binance-logo {
-  
-  width: 120px;
-  
-}
-
-.angelone-logo {
-  width: 120px;
-}
-
+.binance-logo,
+.angelone-logo,
 .telegram-logo {
   width: 120px;
-}
-
-
-.site-title {
-  font-size: 2rem;
-  margin-top: 10px;
-  color: #2c3e50;
 }
 
 /* Main content styling */
@@ -71,6 +100,7 @@ body {
   flex-wrap: wrap;
   justify-content: center;
   gap: 20px;
+  padding: 40px 20px;
 }
 
 /* Card styling */
@@ -92,7 +122,7 @@ body {
 .card h2 {
   font-size: 1.5rem;
   margin-bottom: 15px;
-  color: #e5e8eb;
+  color: #2c3e50;
 }
 
 .card p {
@@ -115,9 +145,7 @@ body {
 .btn:hover {
   background: linear-gradient(45deg, #2980b9, #3498db);
   box-shadow: 0 0 10px rgba(41, 128, 185, 0.7);
-  
 }
-
 
 /* Instagram Buttons Section */
 .instagram-buttons-container {
@@ -153,7 +181,7 @@ body {
   height: 80px;
   transition: transform 0.3s ease;
   overflow: hidden;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
 .instagram-btn:hover {
@@ -177,47 +205,12 @@ body {
 }
 
 .instagram-handle:hover {
-  font-weight: 500;
   transform: scale(1.05);
   color: #e1306c;
 }
 
 .instagram-btn-container:not(:last-child) {
   margin-right: 20px;
-}
-
-
-@media (max-width: 768px) {
-  .instagram-handle {
-    opacity: 0;
-    transform: translateY(10px);
-    transition: opacity 0.5s ease, transform 0.5s ease;
-  }
-
-  .instagram-btn-container.visible .instagram-handle {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@media (max-width: 768px) {
-  .instagram-handle {
-    opacity: 0;
-    transform: translateY(10px);
-    transition: opacity 0.5s ease, transform 0.5s ease;
-  }
-
-  .instagram-btn-container.visible .instagram-handle {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-#ih{
-  align-items: center;
-  font-family: Georgia, 'Times New Roman', Times, serif;
-  text-align: center;
-  color: black;
 }
 
 /* Footer styling */
@@ -243,6 +236,14 @@ body {
   text-decoration: underline;
 }
 
+/* Instagram section heading */
+#ih {
+  text-align: center;
+  color: black;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  margin-top: 40px;
+}
+
 /* Responsive design */
 @media (max-width: 768px) {
   .main-content {
@@ -253,5 +254,16 @@ body {
   .card {
     width: 100%;
     max-width: 400px;
+  }
+
+  .instagram-handle {
+    opacity: 0;
+    transform: translateY(10px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+  }
+
+  .instagram-btn-container.visible .instagram-handle {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
